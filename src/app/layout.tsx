@@ -3,6 +3,7 @@ import { DM_Sans } from 'next/font/google';
 import './globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@/components/modals/ThemeProvider';
+import { experimental__simple } from '@clerk/themes';
 import Navbar from '@/components/navbar';
 
 const dm = DM_Sans({ subsets: ['latin'] });

@@ -162,7 +162,7 @@ export function ProfileForm() {
                 <FormItem>
                   <FormControl>
                     <span className='text-gray-800 text-lg lg:text-2xl  font-normal  '>
-                      Follow Catcents on Twitter
+                      Follow BaoBao on Twitter
                       <SocialIcon
                         url='https://x.com'
                         style={{ width: 20, height: 20, marginLeft: 4 }}
