@@ -26,7 +26,7 @@ import MaxWidthWrapper from './max-width-wrapper';
 import { auth } from '@clerk/nextjs/server';
 import { useUser } from '@clerk/nextjs';
 
-const ADMIN_PASSWORD = '123456';
+const ADMIN_PASSWORD = '908734';
 
 const FormSchema = z.object({
   pin: z
@@ -69,13 +69,13 @@ const CodeComponent = () => {
               control={form.control}
               name='pin'
               render={({ field }) => (
-                <FormItem className=''>
+                <FormItem className='flex flex-col items-center justify-center'>
                   <FormLabel className='text-5xl mb-8 text-white'>
                     Add your secret Code
                   </FormLabel>
                   <FormControl>
                     <InputOTP
-                      className='bg-white text-black rounded-lg'
+                      className='bg-white text-black rounded-lg '
                       maxLength={6}
                       {...field}
                     >
