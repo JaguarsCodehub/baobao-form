@@ -54,25 +54,29 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <Link
-                  href='/api/auth/register'
-                  className={buttonVariants({
-                    size: 'sm',
-                    variant: 'ghost',
-                  })}
-                >
-                  Sign up
-                </Link>
+                <Button>
+                  <Link
+                    href='/api/auth/register'
+                    className={buttonVariants({
+                      size: 'sm',
+                      variant: 'ghost',
+                    })}
+                  >
+                    Sign up
+                  </Link>
+                </Button>
 
-                <Link
-                  href='/api/auth/login'
-                  className={buttonVariants({
-                    size: 'sm',
-                    variant: 'ghost',
-                  })}
-                >
-                  Login
-                </Link>
+                <Button>
+                  <Link
+                    href='/api/auth/login'
+                    className={buttonVariants({
+                      size: 'sm',
+                      variant: 'ghost',
+                    })}
+                  >
+                    Login
+                  </Link>
+                </Button>
 
                 <div className='h-8 w-px bg-zinc-200 hidden sm:block' />
               </>

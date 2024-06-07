@@ -96,10 +96,10 @@ const SubmissionsPage = () => {
             <p className='text-4xl font-bold text-white'>No Submissions Yet</p>
             <Button
               onClick={() => router.push('/form')}
-              className='flex mt-6 items-center cursor-pointer text-white bg-black'
+              className='flex mt-6 items-center cursor-pointer text-black bg-white'
             >
               Fill the Form
-              <ArrowRight className='ml-1.5 h-5 w-5 text-white' />
+              <ArrowRight className='ml-1.5 h-5 w-5 text-black' />
             </Button>
           </div>
         )}
