@@ -27,8 +27,8 @@ const SubmissionsPage = () => {
     fetchForm();
   }, []);
 
-  const handleCardClick = (id: string) => {
-    router.push(`/submission/${id}`);
+  const handleCardClick = () => {
+    router.push(`/form`);
   };
 
   return (
@@ -39,7 +39,7 @@ const SubmissionsPage = () => {
           alt='HERO'
           width={600}
           height={400}
-          className='hidden lg:inline -mb-32 opacity-50'
+          className=' lg:inline -mb-12 opacity-50 -z-2'
         />
 
         {form ? (
@@ -66,13 +66,19 @@ const SubmissionsPage = () => {
                     d='M16 7a4 4 0 01-8 0M12 14v6m0 0H9m3 0h3m4-6H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v11a2 2 0 01-2 2z'
                   ></path>
                 </svg>
-                <h2 className='text-lg text-gray-300'>Username</h2>
+                <h2 className='text-lg text-gray-300'>Email Address</h2>
                 <p className='text-2xl font-semibold text-white'>{form.name}</p>
               </div>
               <div className='flex flex-col bg-zinc-500/30 p-4 rounded-lg shadow-inner'>
                 <h2 className='text-lg text-gray-300'>Wallet Address</h2>
                 <p className='line-clamp-1 text-xl font-semibold text-white'>
                   {form.walletAddress}
+                </p>
+              </div>
+              <div className='flex flex-col bg-zinc-500/30 p-4 rounded-lg shadow-inner'>
+                <h2 className='text-lg text-gray-300'>Your TwitterHandle</h2>
+                <p className='line-clamp-1 text-xl font-semibold text-white'>
+                  {form.twitterHandle}
                 </p>
               </div>
               <div className='flex flex-col items-center bg-zinc-500/30 p-4 rounded-lg shadow-inner'>
@@ -92,16 +98,20 @@ const SubmissionsPage = () => {
             </div>
           </div>
         ) : (
-          <div className='flex flex-col'>
-            <p className='text-4xl font-bold text-white'>No Submissions Yet</p>
-            <Button
-              onClick={() => router.push('/form')}
-              className='flex mt-6 items-center cursor-pointer text-black bg-white'
-            >
-              Fill the Form
-              <ArrowRight className='ml-1.5 h-5 w-5 text-black' />
-            </Button>
-          </div>
+          <>
+            <div className='flex flex-col'>
+              <p className='text-4xl font-bold text-white'>
+                No Submissions Yet
+              </p>
+              <Button
+                onClick={handleCardClick}
+                className='flex mt-6 cursor-pointer items-center text-black bg-white hover:bg-stone-400 hover:text-black'
+              >
+                Fill the Form
+                <ArrowRight className='ml-1.5 h-5 w-5 text-black' />
+              </Button>
+            </div>
+          </>
         )}
       </div>
     </div>

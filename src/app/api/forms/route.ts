@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     const { userId } = auth();
     const body = await req.json();
 
-    const { name, walletAddress, contributionReview } = body;
+    const { name, walletAddress, contributionReview, twitterHandle } = body;
 
     if (!userId) {
       return NextResponse.json('Unauthorized', { status: 403 });
@@ -48,6 +48,7 @@ export async function POST(req: Request) {
         userId: dbUser.id,
         name,
         walletAddress,
+        twitterHandle,
         contributionReview,
       },
     });

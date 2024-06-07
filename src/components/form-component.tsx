@@ -29,11 +29,15 @@ import { SocialIcon } from 'react-social-icons';
 import Image from 'next/image';
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: 'name must be at least 2 characters.',
-  }),
+  name: z
+    .string()
+    .min(1, { message: 'This field has to be filled' })
+    .email('This is not a valid email'),
   walletAddress: z.string().min(12, {
     message: 'Wallet Address must be at least 12 characters',
+  }),
+  twitterHandle: z.string().min(4, {
+    message: 'Enter your valid Twitter handle',
   }),
   contributionReview: z.string().min(20, {
     message: 'Write your contribution to web3 in at least 20 characters',
@@ -108,11 +112,11 @@ export function ProfileForm() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className='text-xl font-semibold'>
-                        Username
+                        Email Address
                       </FormLabel>
                       <FormControl>
                         <Input
-                          placeholder='Enter your username'
+                          placeholder='Enter your email address'
                           {...field}
                           className='rounded-lg border-solid border-black'
                         />
@@ -142,15 +146,34 @@ export function ProfileForm() {
                 />
                 <FormField
                   control={form.control}
+                  name='twitterHandle'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className='text-xl font-semibold'>
+                        Twitter Handle
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder='Enter your twitter handle'
+                          {...field}
+                          className='rounded-lg border-solid border-black'
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
                   name='contributionReview'
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className='text-xl font-semibold'>
-                        Your contribution to Web 3
+                        Why do you want to be whitelisted for BaoBao NFT ?
                       </FormLabel>
                       <FormControl>
                         <Input
-                          placeholder='Write about your contribution to web3'
+                          placeholder='Provide a brief explanation of why you are interested in being a part of BaoBao NFT'
                           {...field}
                           className='rounded-lg border-solid border-black'
                         />

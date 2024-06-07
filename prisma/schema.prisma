@@ -27,6 +27,7 @@ model Form {
   user               User     @relation(fields: [userId], references: [id])
   name               String
   walletAddress      String
+  twitterHandle      String
   contributionReview String
   status             String   @default("pending")
   createdAt          DateTime @default(now())
