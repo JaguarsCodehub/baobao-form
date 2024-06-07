@@ -25,7 +25,10 @@ const Navbar = () => {
           <div className='h-full flex items-center space-x-4'>
             {user ? (
               <>
-                <SignOutButton />
+                <div className='text-white'>
+                  <SignOutButton />
+                </div>
+
                 {isAdmin ? (
                   <Link
                     href='/dashboard'

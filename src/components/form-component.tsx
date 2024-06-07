@@ -89,7 +89,7 @@ export function ProfileForm() {
           className='hidden lg:inline -mb-72'
         />
 
-        <Card className='mx-auto m-24 mt-20 lg:mt-12 mb-24 animate-fadeIn lg:m-0'>
+        <Card className='mx-auto mt-20 lg:mt-12 mb-24 animate-fadeIn lg:m-0'>
           <CardHeader className='text-center bg-black text-white rounded-t-xl'>
             <CardTitle className='font-medium text-xl lg:text-3xl'>
               Fill this form for whitelisting your account
