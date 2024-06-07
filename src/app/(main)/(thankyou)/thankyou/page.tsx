@@ -27,7 +27,7 @@ const ThankYou = () => {
 
   const shareOnTwitter = () => {
     const text = encodeURIComponent(
-      'I just submitted my application! #Web3 #Application'
+      'I just applied for the @wowBaoBaoXYZ NFT Whitelist !'
     );
     const url = `https://twitter.com/intent/tweet?text=${text}`;
     window.open(url, '_blank');
