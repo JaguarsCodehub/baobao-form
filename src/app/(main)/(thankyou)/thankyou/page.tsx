@@ -79,13 +79,21 @@ const ThankYou = () => {
                   href='https://x.com/catcentsio'
                 />
               </Button>
-              {/* <Button
+              <Button
                 onClick={() => router.push('/submission')}
-                className='ml-4 mt-12 p-4 text-xl bg-rose-400 text-white rounded-md hover:bg-white hover:text-black'
+                className='ml-4 mt-12 p-4 text-xl bg-purple-500 text-white rounded-md hover:bg-white hover:text-black'
               >
-                View Status
-                <ArrowRight className='h-4 w-4 ml-2' />
-              </Button> */}
+                Join Discord Channel
+                <SocialIcon
+                  url='https://discord.com'
+                  style={{
+                    width: 20,
+                    height: 20,
+                    marginLeft: 12,
+                  }}
+                  href='https://x.com/catcentsio'
+                />
+              </Button>
             </div>
           </div>
         </MaxWidthWrapper>

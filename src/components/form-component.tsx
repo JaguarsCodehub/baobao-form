@@ -185,9 +185,9 @@ export function ProfileForm() {
                 <FormItem>
                   <FormControl>
                     <span className='text-gray-800 text-lg lg:text-2xl  font-normal  '>
-                      Follow BaoBao on Twitter
+                      Join or Discord Channel
                       <SocialIcon
-                        url='https://x.com'
+                        url='https://discord.com'
                         style={{ width: 20, height: 20, marginLeft: 4 }}
                         href='https://x.com/catcentsio'
                       />
