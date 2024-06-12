@@ -189,7 +189,7 @@ export function ProfileForm() {
                       <SocialIcon
                         url='https://discord.com'
                         style={{ width: 20, height: 20, marginLeft: 4 }}
-                        href='https://x.com/catcentsio'
+                        href='https://x.com/WOWbaobaoXYZ'
                       />
                       and Turn on notifications.
                     </span>
