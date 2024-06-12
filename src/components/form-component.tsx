@@ -183,17 +183,25 @@ export function ProfileForm() {
                   )}
                 />
                 <FormItem>
-                  <FormControl>
-                    <span className='text-gray-800 text-lg lg:text-2xl  font-normal  '>
-                      Join or Discord Channel
+                  <FormControl className='flex items-center justify-center'>
+                    <span className='text-gray-800 text-lg lg:text-2xl text-center items-center justify-center  font-normal  '>
+                      Join us on Twitter
+                      <SocialIcon
+                        url='https://x.com'
+                        style={{ width: 20, height: 20, marginLeft: 4 }}
+                        href='https://x.com/WOWbaobaoXYZ'
+                      />{' '}
+                      and Discord{' '}
                       <SocialIcon
                         url='https://discord.com'
                         style={{ width: 20, height: 20, marginLeft: 4 }}
-                        href='https://x.com/WOWbaobaoXYZ'
+                        href='https://discord.gg/WnQ5D7ycDf'
                       />
-                      and Turn on notifications.
                     </span>
                   </FormControl>
+                  <span className='flex items-center justify-center'>
+                    turn on notifications.
+                  </span>
                 </FormItem>
 
                 <Button
